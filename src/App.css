@@ -1,23 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
+:root {
+  --white: #fff;
+  --dark-grey: #363636;
+  /* Change dark grey variable to failing contrast */
+  /* --dark-grey: #b3a9a9; */
+}
 .App {
   margin: 1rem;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #fff;
-  color: #363636;
+  background: var(--white);
+  color: var(--dark-grey);
 }
 
 body[data-color-scheme="dark"] {
-  background: #fff;
-  color: #363636;
+  background: var(--white);
+  color: var(--dark-grey);
 }
 
 body[data-color-scheme="light"] {
-  background: #fff;
-  color: #363636;
+  background: var(--white);
+  color: var(--dark-grey);
 }
 
 .sr-only {
@@ -37,7 +43,7 @@ fieldset {
 .button {
   position: relative;
   display: inline-block;
-  color: #363636;
+  color: var(--dark-grey);
   border: none;
   margin: 0;
   text-align: left;
@@ -60,109 +66,109 @@ fieldset {
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 12px solid #363636;
+  border-top: 12px solid var(--dark-grey);
 }
 
 [data-color-scheme="dark"] .button {
-  color: #fff;
+  color: var(--white);
 }
 
 [data-color-scheme="dark"] .button::after {
-  border-top-color: #fff;
+  border-top-color: var(--white);
 }
 
 [data-color-scheme="light"] .button {
-  color: #363636;
+  color: var(--dark-grey);
 }
 
 [data-color-scheme="light"] .button::after {
-  border-top-color: #363636;
+  border-top-color: var(--dark-grey);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #363636;
-    color: #fff;
+    background: var(--dark-grey);
+    color: var(--white);
   }
 
   body[data-color-scheme="system-default"],
   body[data-color-scheme="dark"] {
-    background: #363636;
-    color: #fff;
+    background: var(--dark-grey);
+    color: var(--white);
   }
 
   body[data-color-scheme="light"] {
-    background: #fff;
-    color: #363636;
+    background: var(--white);
+    color: var(--dark-grey);
   }
 
   .button {
-    color: #fff;
+    color: var(--white);
   }
 
   .button::after {
-    border-top-color: #fff;
+    border-top-color: var(--white);
   }
 
   [data-color-scheme="system-default"] .button,
   [data-color-scheme="dark"] .button {
-    color: #fff;
+    color: var(--white);
   }
 
   [data-color-scheme="system-default"] .button::after,
   [data-color-scheme="dark"] .button::after {
-    border-top-color: #fff;
+    border-top-color: var(--white);
   }
 
   [data-color-scheme="light"] .button {
-    color: #363636;
+    color: var(--dark-grey);
   }
 
   [data-color-scheme="light"] .button::after {
-    border-top-color: #363636;
+    border-top-color: var(--dark-grey);
   }
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    background: #fff;
-    color: #363636;
+    background: var(--white);
+    color: var(--dark-grey);
   }
 
   body[data-color-scheme="system-default"],
   body[data-color-scheme="light"] {
-    background: #fff;
-    color: #363636;
+    background: var(--white);
+    color: var(--dark-grey);
   }
 
   body[data-color-scheme="dark"] {
-    background: #363636;
-    color: #fff;
+    background: var(--dark-grey);
+    color: var(--white);
   }
 
   .button {
-    color: #363636;
+    color: var(--dark-grey);
   }
 
   .button::after {
-    border-top-color: #363636;
+    border-top-color: var(--dark-grey);
   }
 
   [data-color-scheme="system-default"] .button,
   [data-color-scheme="light"] .button {
-    color: #363636;
+    color: var(--dark-grey);
   }
 
   [data-color-scheme="system-default"] .button::after,
   [data-color-scheme="light"] .button::after {
-    border-top-color: #363636;
+    border-top-color: var(--dark-grey);
   }
 
   [data-color-scheme="dark"] .button {
-    color: #fff;
+    color: var(--white);
   }
 
   [data-color-scheme="dark"] .button::after {
-    border-top-color: #fff;
+    border-top-color: var(--white);
   }
 }
