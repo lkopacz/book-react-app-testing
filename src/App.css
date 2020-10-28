@@ -1,38 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
 .App {
-  text-align: center;
+  margin: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #363636;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body[data-color-scheme="dark"] {
+  background: #fff;
+  color: #363636;
+}
+
+body[data-color-scheme="light"] {
+  background: #fff;
+  color: #363636;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+fieldset {
+  border: 0;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  color: #363636;
+  border: none;
+  margin: 0;
+  text-align: left;
+  width: 5.5rem;
+  border: 1px solid;
+  padding: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  right: 0.35rem;
+  top: 0.65rem;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid #363636;
+}
+
+[data-color-scheme="dark"] .button {
+  color: #fff;
+}
+
+[data-color-scheme="dark"] .button::after {
+  border-top-color: #fff;
+}
+
+[data-color-scheme="light"] .button {
+  color: #363636;
+}
+
+[data-color-scheme="light"] .button::after {
+  border-top-color: #363636;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #363636;
+    color: #fff;
+  }
+
+  body[data-color-scheme="system-default"],
+  body[data-color-scheme="dark"] {
+    background: #363636;
+    color: #fff;
+  }
+
+  body[data-color-scheme="light"] {
+    background: #fff;
+    color: #363636;
+  }
+
+  .button {
+    color: #fff;
+  }
+
+  .button::after {
+    border-top-color: #fff;
+  }
+
+  [data-color-scheme="system-default"] .button,
+  [data-color-scheme="dark"] .button {
+    color: #fff;
+  }
+
+  [data-color-scheme="system-default"] .button::after,
+  [data-color-scheme="dark"] .button::after {
+    border-top-color: #fff;
+  }
+
+  [data-color-scheme="light"] .button {
+    color: #363636;
+  }
+
+  [data-color-scheme="light"] .button::after {
+    border-top-color: #363636;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #363636;
   }
-  to {
-    transform: rotate(360deg);
+
+  body[data-color-scheme="system-default"],
+  body[data-color-scheme="light"] {
+    background: #fff;
+    color: #363636;
+  }
+
+  body[data-color-scheme="dark"] {
+    background: #363636;
+    color: #fff;
+  }
+
+  .button {
+    color: #363636;
+  }
+
+  .button::after {
+    border-top-color: #363636;
+  }
+
+  [data-color-scheme="system-default"] .button,
+  [data-color-scheme="light"] .button {
+    color: #363636;
+  }
+
+  [data-color-scheme="system-default"] .button::after,
+  [data-color-scheme="light"] .button::after {
+    border-top-color: #363636;
+  }
+
+  [data-color-scheme="dark"] .button {
+    color: #fff;
+  }
+
+  [data-color-scheme="dark"] .button::after {
+    border-top-color: #fff;
   }
 }
